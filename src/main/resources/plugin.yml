@@ -1,0 +1,24 @@
+name: Xpfly
+version: '${project.version}'
+main: com.xiaye.xpfly.Xpfly
+api-version: 1.18
+description: Made for Zamcraft
+commands:
+  xpflyon:
+    description: 打开经验飞行模式
+    permission: xpfly.xpflyon
+  xpreload:
+    description: 重载插件
+    permission: xpfly.xpreload
+permissions:
+  xpfly.*:
+    description: Xpfly的所有权限
+    children:
+      xpfly.xpflyon: true
+      xpfly.xpreload: true
+  xpfly.xpflyon:
+    description: 允许使用/xpflyon指令
+    default: op
+  xpfly.xpreload:
+    description: 允许使用/xpreload指令
+    default: op
